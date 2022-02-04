@@ -98,6 +98,10 @@
         
         // Change nav bar item
         ChangeProductsToProjects();
+        
+        // Background body image
+        let bodyElement = document.body;            
+        bodyElement.setAttribute("background", "/images/backgroundfinal.jpg");
 
         // Step 1 - get a reference to an entry point(s) (insertion / deletion point)
         let MainContent = document.getElementsByTagName("main")[0];
@@ -132,6 +136,10 @@
         
         // Change nav bar item
         ChangeProductsToProjects();
+        
+        // Background body image
+        let bodyElement = document.body;            
+        bodyElement.setAttribute("background", "/images/backgroundfinal.jpg");
 
         // Step 1 - get a reference to an entry point(s) (insertion / deletion point)
         let MainContent = document.getElementsByTagName("main")[0];
@@ -165,6 +173,10 @@
         // Change nav bar item
         ChangeProductsToProjects();
 
+        // Background body image
+        let bodyElement = document.body;            
+        bodyElement.setAttribute("background", "/images/backgroundfinal.jpg");
+
         // Step 1 - get a reference to an entry point(s) (insertion / deletion point)
         let MainContent = document.getElementsByTagName("main")[0];
         
@@ -193,6 +205,10 @@
         
         // Change nav bar item
         ChangeProductsToProjects();
+        
+        // Background body image
+        let bodyElement = document.body;            
+        bodyElement.setAttribute("background", "/images/backgroundfinal.jpg");
 
         // get sendButton element button
         let sendButton = document.getElementById("sendButton");
