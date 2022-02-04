@@ -1,6 +1,6 @@
 // Matt Enns 100821160
 // David Nguyen 100604426
-// 2022-02-03
+// 2022-02-04
 
 // IIFE -- Immediately Invoked Function Express
 // AKA anonymous self-executing function
@@ -114,9 +114,11 @@
         <p>Resume Link: Google Doc</p>
         <p>Contact Link: <a title="Matthew Enns email at Durham College" href="mailto:matthew.enns@dcmail.ca" target="_blank">matthew.enns@dcmail.ca</a></p>
         <h3>David Nguyen</h3>
+        <p>I have three passions in life: computers, art and programming. I also like gaming and coffee. I like creating software mostly but I am willing to try and learn other types of development.</p>
         <p><img src="./images/davidnguyenclipartprofilepic.jpg" alt="David Nguyen Profile Pic Clipart" /></p>
         <p>Resume Link: <a title="David Nguyen's Resume in a Google Doc" href="https://docs.google.com/document/d/1c5DLF8RGRX8LbDr0MFF2LPyvJGN5oruNn1yS0Txhnbk/edit?usp=sharing" target="_blank">Google Doc</a></p>
-        <p>Contact Link: <a title="David Nguyen's Email at Durham College" href="mailto:david.nguyen1@dcmail.ca" target="_blank">david.nguyen1@dcmail.ca</a></p>`;
+        <p>Contact Link: <a title="David Nguyen's Email at Durham College" href="mailto:david.nguyen1@dcmail.ca" target="_blank">david.nguyen1@dcmail.ca</a></p>
+        <hr/><hr/><hr/>`;
 
         // Step 3 - configure new element       
         Article.setAttribute("class", "container");
@@ -147,12 +149,13 @@
         // Step 2 - create a HTML Element in memory
         let Article = document.createElement("article");
         let ArticleParagraph = `<h3>Here is our Projects page showcasing our 4 favourite projects</h3>
-        <p>Matt Enns Project 1</p>
-        <p>Matt Enns Project 2</p>
+        <p><a title="MattEnns.github.io Website" href="https://MattEnns.github.io/" target="_blank">MattEnns.github.io</a> - GitHub.io website</p>
+        <p><img src="./images/megithubio.jpg" alt="Snapshot of GitHub.io website" /></p>
         <p><a title="AMLCSL Website" href="https://www.amlcsl.com/" target="_blank">AMLCSL.com</a> - Oshawa Computer Repair and Sales store website created in WordPress</p>
         <p><img src="./images/amlcsl.jpg" alt="Snapshot of AMLCSL WordPress website" /></p>
         <p><a title="Teach English World Teaching Portal Website" href="http://www.teachenglishworld.com/" target="_blank">TeachEnglishWorld.com</a> - Teaching English Portal website created in WordPress</p>
-        <p><img src="./images/tew.jpg" alt="Snapshot of Teach English World WordPress website" /></p>`;
+        <p><img src="./images/tew.jpg" alt="Snapshot of Teach English World WordPress website" /></p>
+        <hr/><hr/><hr/>`;
 
         // Step 3 - configure new element       
         Article.setAttribute("class", "container");
@@ -186,7 +189,10 @@
         <h3>Custom Software Development</h3>
         <p><img src="./images/softwaredevelopmentclipart.jpg" alt="Software Development Clipart" /></p>
         <h3>Custom Website Development</h3>
-        <p><img src="./images/webdevelopmentclipart.jpg" alt="Web Development Clipart" /></p>`;
+        <p><img src="./images/webdevelopmentclipart.jpg" alt="Web Development Clipart" /></p>
+        <h3>Custom Logo Development</h3>
+        <p><img src="./images/logodesignclipart.jpg" alt="Web Development Clipart" /></p>
+        <hr/><hr/><hr/>`;
 
         // Step 3 - configure new element       
         Article.setAttribute("class", "container");
