@@ -193,6 +193,41 @@ class User {
     });
   }
 
+/**
+   * Validates field
+   *
+   * @param {string} input_field_ID
+   * @param {RegExp} regular_expression
+   * @param {string} message_area
+   * @param {string} error_message
+   */
+ function ValidateField2(input_field_ID, regular_expression, message_area, error_message) {
+
+  // Hide messageArea
+  let messageArea = $("#" + message_area + "").hide();
+
+  // lose focus and validate field
+  $("#" + input_field_ID).on("blur", function () {
+    let inputFieldText = $(this).val();
+
+    if (!regular_expression.test(inputFieldText)) {
+      
+      // trigger the focus and select
+      $(this).trigger("focus").trigger("select"); 
+
+      // Show messageArea
+      messageArea.show().addClass("alert alert-danger").text(error_message);
+
+    } else {
+
+      // Hide messageArea
+      messageArea.removeAttr("class").hide();
+    }
+  });
+}
+
+
+
   /**
    * Contact form validation
    */
@@ -521,11 +556,12 @@ class User {
    * 
    * @param {string} input_field_ID1 
    * @param {string} input_field_ID2 
+   * @param {string} message_area 
    * @param {string} error_message 
    */
-  function ComparePasswords(input_field_ID1, input_field_ID2, error_message) {
+  function ComparePasswords(input_field_ID1, input_field_ID2, message_area, error_message) {
     // Hide messageArea
-    let messageArea = $("#messageArea").hide();
+    let messageArea = $("#" + message_area + "").hide();
 
     // on blur password field 2 and run comparison 
     $("#" + input_field_ID2).on("blur", function () {
@@ -553,41 +589,41 @@ class User {
   function RegisterValidation() {
 
     // firstName validation
-    ValidateField(
+    ValidateField2(
       "firstName",
       /^([A-Z][a-z]{1,})$/,
+      "ErrorMessage",
       "Please enter a valid First Name."
     );
 
     // lastName validation
-    ValidateField(
+    ValidateField2(
       "lastName",
       /^([A-Z][a-z]{1,})$/,
+      "ErrorMessage",
       "Please enter a valid Last Name."
     );
 
     // emailAddress validation
-    ValidateField(
+    ValidateField2(
       "emailAddress",
       /^(([a-zA-Z0-9._-]{8,})+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,10})$/,
+      "ErrorMessage",
       "Please enter a valid email address."
     );
 
     // password validation
-    ValidateField(
+    ValidateField2(
       "password",
       /^([a-zA-Z0-9._-]{6,})$/,
+      "ErrorMessage",
       "Please enter a valid Password."
     );
 
-    if (document.getElementById("messageArea"))
-    {
-      // set div element id to ErrorMessage
-      document.getElementById("messageArea").id = "ErrorMessage";
-    }
+
 
     // compare password to see matching
-    ComparePasswords("password", "confirmPassword", "Passwords do not match.");
+    ComparePasswords("password", "confirmPassword", "ErrorMessage", "Passwords do not match.");
   }
 
   /**
@@ -595,6 +631,11 @@ class User {
    */
   function DisplayRegisterPage() {
     console.log("Register Page");
+
+    //$("h1").
+    //$("h1").append('<div id="ErrorMessage" class="alert alert-success">Sample Text</div>');
+    $('<div id="ErrorMessage" class="alert alert-success">Sample Text</div>').insertAfter("h1");
+    let messageArea = $("#ErrorMessage").hide();
 
     // Register validation
     RegisterValidation();
